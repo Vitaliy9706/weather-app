@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form >
+        <input type="text" class="text" placeholder="Search city">
+        <ul>
+        </ul>
+    </form>
+    <div class="weather" id="weather" style="display:none;">
+        <img src="" alt="" id="icon">
+        <h1 id="degrees"></h1>
+        <h2 id="city"></h2>
+        <div class="info">
+            <div>
+                <h3>Wind</h3>
+                <div id="windValue" class="value"></div>
+            </div>
+            <div>
+                <h3>Feels Like</h3>
+                <div id="feelsLikeValue" class="value"></div>
+            </div>
+            <div>
+                <h3>Humidity</h3>
+                <div id="humidityValue" class="value"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="myjs.js"></script>
+</body>
+</html>
