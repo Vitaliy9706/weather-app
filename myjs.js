@@ -1,7 +1,6 @@
-// https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
-// http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={API key}
-const key = '8850523b153b495e03f3382b44921119';
+const key = 'YOUR_API_KEY';
 
+// function to get data by city name
 async function search() {
     const phrase = document.querySelector('input[type="text"]').value;
     const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${phrase}&limit=5&appid=${key}`);
@@ -18,6 +17,7 @@ const debouncedSearch = _.debounce(() => {
     search();
 }, 600);
 
+//function to get weather data
 async function showWeather(lat,lon,name) {
     const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=metric`);
     const data = await response.json();
